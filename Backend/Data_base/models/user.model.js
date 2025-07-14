@@ -5,7 +5,8 @@ const userSchema = new mongoose.Schema({
   correo: { type: String, required: true, unique: true },
   contrasena: { type: String, required: true },
   direccion: String,
-  rol: { type: String, default: 'cliente' }
+  rol: { type: String, default: 'cliente' },
+  fechaRegistro: { type: Date, default: Date.now },
 });
 
 export default mongoose.model('User', userSchema);
