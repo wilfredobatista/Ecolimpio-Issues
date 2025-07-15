@@ -1,4 +1,4 @@
-import Usuario from "../models/usuario.model.js";
+import Usuario from "../../models/usuario.model.js";
 
 export default async function (fastify, opts) {
   fastify.get("/", async (request, reply) => {
