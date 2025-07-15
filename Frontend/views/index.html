@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLimpio - Eco-Friendly Garbage Collection Platform</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Fidelity Toggle -->
+    <div class="fidelity-toggle">
+      <button
+        onclick="setFidelity('wireframe')"
+        class="fidelity-btn"
+        id="wireframe-btn"
+      >
+        Wireframe
+      </button>
+      <button
+        onclick="setFidelity('low-fi')"
+        class="fidelity-btn"
+        id="low-fi-btn"
+      >
+        Low-Fi
+      </button>
+      <button
+        onclick="setFidelity('high-fi')"
+        class="fidelity-btn active"
+        id="high-fi-btn"
+      >
+        High-Fi
+      </button>
+    </div>
+
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="nav-content">
+          <div class="logo-section">
+            <div class="logo-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h1 class="logo-text">EcoLimpio</h1>
+          </div>
+          <div class="nav-links">
+            <button
+              onclick="showScreen('home')"
+              class="nav-btn active"
+              id="home-nav"
+            >
+              Home
+            </button>
+            <button
+              onclick="showScreen('service')"
+              class="nav-btn"
+              id="service-nav"
+            >
+              Service
+            </button>
+            <button
+              onclick="showScreen('checkout')"
+              class="nav-btn"
+              id="checkout-nav"
+            >
+              Checkout
+            </button>
+            <button onclick="showScreen('form')" class="nav-btn" id="form-nav">
+              Contact
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Home Screen -->
+      <div id="home-screen" class="screen active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <h2 class="hero-title">Eco-Friendly Waste Collection</h2>
+          <p class="hero-description">
+            Professional waste collection services for your home. We make
+            recycling easy and convenient while protecting our environment.
+          </p>
+          <div class="hero-buttons">
+            <button onclick="showScreen('form')" class="btn-primary">
+              Sign Up
+            </button>
+            <button onclick="showScreen('service')" class="btn-secondary">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="service-title">Organic Waste</h3>
+            <p class="service-description">
+              Professional collection and processing service
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3 class="service-title">Plastic Recycling</h3>
+            <p class="service-description">
+              Professional collection and processing service
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="service-title">Electronic Waste</h3>
+            <p class="service-description">
+              Professional collection and processing service
+            </p>
+          </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+          <h3 class="testimonials-title">What Our Customers Say</h3>
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="testimonial-info">
+                  <p class="testimonial-name">Maria Rodriguez</p>
+                  <p class="testimonial-role">Environmental Advocate</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                EcoLimpio made waste management so easy! Their service is
+                reliable and truly helps the environment.
+              </p>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="testimonial-info">
+                  <p class="testimonial-name">Carlos Martinez</p>
+                  <p class="testimonial-role">Eco Enthusiast</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                Amazing service! They handle everything professionally and make
+                recycling effortless.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Service Screen -->
+      <div id="service-screen" class="screen">
+        <h2 class="screen-title">Book Your Collection Service</h2>
+
+        <div class="form-section">
+          <h3 class="section-title">Select Waste Type</h3>
+          <div class="selection-grid">
+            <button
+              onclick="selectWasteType('organic')"
+              class="selection-card"
+              id="organic-card"
+            >
+              <div class="selection-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <p class="selection-label">Organic</p>
+            </button>
+            <button
+              onclick="selectWasteType('plastic')"
+              class="selection-card"
+              id="plastic-card"
+            >
+              <div class="selection-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <p class="selection-label">Plastic</p>
+            </button>
+            <button
+              onclick="selectWasteType('electronic')"
+              class="selection-card"
+              id="electronic-card"
+            >
+              <div class="selection-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <p class="selection-label">Electronic</p>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Select Amount</h3>
+          <div class="selection-grid">
+            <button
+              onclick="selectAmount('small')"
+              class="selection-card"
+              id="small-card"
+            >
+              <p class="selection-label">Small</p>
+              <p class="selection-description">1-2 bags</p>
+            </button>
+            <button
+              onclick="selectAmount('medium')"
+              class="selection-card"
+              id="medium-card"
+            >
+              <p class="selection-label">Medium</p>
+              <p class="selection-description">3-5 bags</p>
+            </button>
+            <button
+              onclick="selectAmount('large')"
+              class="selection-card"
+              id="large-card"
+            >
+              <p class="selection-label">Large</p>
+              <p class="selection-description">6+ bags</p>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Pickup Location</h3>
+          <div class="input-group">
+            <i class="fas fa-map-marker-alt input-icon"></i>
+            <input
+              type="text"
+              id="location-input"
+              placeholder="Enter your address"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Upload Photos</h3>
+          <div class="upload-area">
+            <i class="fas fa-camera upload-icon"></i>
+            <p class="upload-text">Upload photos of your waste</p>
+            <button onclick="uploadPhoto()" class="btn-secondary">
+              Choose Files
+            </button>
+            <p id="photo-count" class="photo-count">0 photos uploaded</p>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button
+            onclick="proceedToCheckout()"
+            class="btn-primary"
+            id="continue-btn"
+            disabled
+          >
+            Continue to Checkout
+          </button>
+        </div>
+      </div>
+
+      <!-- Checkout Screen -->
+      <div id="checkout-screen" class="screen">
+        <h2 class="screen-title">Review Your Order</h2>
+
+        <div class="form-section">
+          <h3 class="section-title">Service Summary</h3>
+          <div class="summary-item">
+            <span>Waste Type:</span>
+            <span id="summary-waste-type">Not selected</span>
+          </div>
+          <div class="summary-item">
+            <span>Amount:</span>
+            <span id="summary-amount">Not selected</span>
+          </div>
+          <div class="summary-item">
+            <span>Pickup Location:</span>
+            <span id="summary-location">Not provided</span>
+          </div>
+          <div class="summary-item">
+            <span>Photos Uploaded:</span>
+            <span id="summary-photos">0</span>
+          </div>
+          <hr class="summary-divider" />
+          <div class="summary-total">
+            <span>Total:</span>
+            <span id="summary-price">$0</span>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Payment Method</h3>
+          <div class="payment-methods">
+            <button
+              onclick="selectPayment('card')"
+              class="payment-card"
+              id="card-payment"
+            >
+              <i class="fas fa-credit-card"></i>
+              <span>Credit Card</span>
+            </button>
+            <button
+              onclick="selectPayment('paypal')"
+              class="payment-card"
+              id="paypal-payment"
+            >
+              <i class="fab fa-paypal"></i>
+              <span>PayPal</span>
+            </button>
+          </div>
+
+          <div class="payment-form">
+            <input type="text" placeholder="Card Number" class="form-input" />
+            <div class="input-row">
+              <input type="text" placeholder="MM/YY" class="form-input" />
+              <input type="text" placeholder="CVC" class="form-input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button onclick="confirmOrder()" class="btn-primary">
+            <i class="fas fa-check-circle"></i>
+            Confirm Order
+          </button>
+        </div>
+      </div>
+
+      <!-- Form Screen -->
+      <div id="form-screen" class="screen">
+        <h2 class="screen-title">Get in Touch</h2>
+
+        <div class="form-section">
+          <div class="input-row">
+            <div class="input-group">
+              <label class="form-label">Name</label>
+              <input
+                type="text"
+                placeholder="Your full name"
+                class="form-input"
+              />
+            </div>
+            <div class="input-group">
+              <label class="form-label">Email</label>
+              <input
+                type="email"
+                placeholder="your@email.com"
+                class="form-input"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="form-label">Phone</label>
+            <div class="input-with-icon">
+              <i class="fas fa-phone input-icon"></i>
+              <input
+                type="tel"
+                placeholder="+1 (555) 123-4567"
+                class="form-input"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="form-label">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Tell us how we can help you..."
+              class="form-textarea"
+            ></textarea>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" class="form-checkbox" />
+            <label for="newsletter" class="checkbox-label">
+              Subscribe to our newsletter for eco-tips and updates
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button onclick="submitForm()" class="btn-primary">
+            <i class="fas fa-envelope"></i>
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
