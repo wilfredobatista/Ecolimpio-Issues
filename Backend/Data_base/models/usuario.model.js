@@ -9,4 +9,4 @@ const userSchema = new mongoose.Schema({
   fechaRegistro: { type: Date, default: Date.now },
 });
 
-export default mongoose.model('User', userSchema);
+export default mongoose.model('Usuario', userSchema);
