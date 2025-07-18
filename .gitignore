@@ -1,9 +1,11 @@
-node_modules/
-
+# Ocultar configuraciones sensibles y dependencias
 .env
-
+node_modules/
 pnpm-lock.yaml
 
+# Archivos del sistema
 .DS_Store
+Thumbs.db
 
-Backend/testModelos.js
+# Archivos temporales de desarrollo
+*.log

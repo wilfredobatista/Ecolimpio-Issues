@@ -1,0 +1,55 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f4f8;
+  color: #333;
+}
+header {
+  background: #007b5e;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-text {
+  font-size: 1.5rem;
+}
+.btn {
+  background: white;
+  color: #007b5e;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.hero {
+  padding: 2rem;
+  text-align: center;
+}
+.login-container, .register-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #007b5e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}

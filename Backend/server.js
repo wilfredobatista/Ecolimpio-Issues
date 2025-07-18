@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import { connectorDB } from "./config/db.js";
 import { PORT } from "./config/config.js";
 import usuarioRoutes from "./routes/v1/usuario.routes.js";
-
+import authRoutes from "./routes/v1/aut.routes.js";
 import fastifyStatic from "@fastify/static";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -27,6 +27,7 @@ await connectorDB();
 
 //Registrar rutas de usuario
 fastify.register(usuarioRoutes, { prefix: "/api/usuarios" });
+fastify.register(authRoutes, { prefix: "/api/v1/auth" });
 
 fastify.listen({ port: PORT }, (err, address) => {
   if (err) throw err;
